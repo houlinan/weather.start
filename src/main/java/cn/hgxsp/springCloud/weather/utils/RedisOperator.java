@@ -182,4 +182,18 @@ public class RedisOperator {
      */
     public long rpush(String key, String value) {
         return redisTemplate.opsForList().rightPush(key, value);
-    }}
+    }
+
+    /**
+    *DESC:判断是否存在key
+    *@author hou.linan
+    *@date:  2018/11/2 11:23
+    *@param:  [key]
+    *@return:  java.lang.Boolean
+    */
+    public Boolean hasKey(String key){
+        return redisTemplate.hasKey(key);
+    }
+
+
+}

@@ -1,5 +1,6 @@
 package cn.hgxsp.springCloud.weather.service;
 
+import cn.hgxsp.springCloud.weather.resultVO.ResResult;
 import cn.hgxsp.springCloud.weather.resultVO.WeatherResponse;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,7 @@ public interface WeatherDataService {
     *@param:  [id]
     *@return:  cn.hgxsp.springCloud.weather.resultVO.WeatherResponse
     */
-    WeatherResponse getDataByCityId(String id) ;
+    ResResult getDataByCityId(String id) ;
 
 
     /**
@@ -29,6 +30,6 @@ public interface WeatherDataService {
     *@param:  [cityName]
     *@return:  cn.hgxsp.springCloud.weather.resultVO.WeatherResponse
     */
-    WeatherResponse getDataByCityName(String cityName) ;
+    ResResult getDataByCityName(String cityName) ;
 
 }

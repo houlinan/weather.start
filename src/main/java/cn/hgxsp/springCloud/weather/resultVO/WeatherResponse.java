@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class WeatherResponse implements Serializable {
 
 
-    private static final long serialVersionUID = 7479640857136693204L;
+    private static final long serialVersionUID = 7479640857136293204L;
     /**
      * data :
      * status : 1000

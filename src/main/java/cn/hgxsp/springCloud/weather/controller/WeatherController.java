@@ -1,5 +1,6 @@
 package cn.hgxsp.springCloud.weather.controller;
 
+import cn.hgxsp.springCloud.weather.resultVO.ResResult;
 import cn.hgxsp.springCloud.weather.resultVO.WeatherResponse;
 import cn.hgxsp.springCloud.weather.service.WeatherDataService;
 import lombok.extern.slf4j.Slf4j;
@@ -25,18 +26,18 @@ public class WeatherController {
     WeatherDataService weatherDataService ;
 
     @GetMapping("/getDataById")
-    public WeatherResponse getDataById(String id ){
-        if(StringUtils.isEmpty(id)) return WeatherResponse.ERROR("传入的ID为空");
-        WeatherResponse result = weatherDataService.getDataByCityId(id);
-        if(ObjectUtils.isEmpty(result)) return WeatherResponse.ERROR("没有获取到该城市数据");
+    public ResResult getDataById(String id ){
+        if(StringUtils.isEmpty(id)) return ResResult.ERROR("传入的ID为空");
+        ResResult result = weatherDataService.getDataByCityId(id);
+        if(ObjectUtils.isEmpty(result)) return ResResult.ERROR("没有获取到该城市数据");
         return result ;
     }
 
     @GetMapping("/getDataByName")
-    public WeatherResponse getDataByName(String cityName ){
-        if(StringUtils.isEmpty(cityName)) return WeatherResponse.ERROR("传入的ID为空");
-        WeatherResponse result = weatherDataService.getDataByCityName(cityName);
-        if(ObjectUtils.isEmpty(result)) return WeatherResponse.ERROR("没有获取到该城市数据");
+    public ResResult getDataByName(String cityName ){
+        if(StringUtils.isEmpty(cityName)) return ResResult.ERROR("传入的ID为空");
+        ResResult result = weatherDataService.getDataByCityName(cityName);
+        if(ObjectUtils.isEmpty(result)) return ResResult.ERROR("没有获取到该城市数据");
         return result ;
     }
 
