@@ -26,6 +26,7 @@ public class Weather implements Serializable {
 
     private Yesterday yesterday;
     private String city;
+    private String aqi ;
     private String ganmao;
     private String wendu;
     private List<Forecast> forecast;

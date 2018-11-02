@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="542e2783-9c61-4de6-bd33-6460e0579f4b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hgxsp/springCloud/weather/controller/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hgxsp/springCloud/weather/controller/WeatherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hgxsp/springCloud/weather/resultVO/ResResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hgxsp/springCloud/weather/service/WeatherDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hgxsp/springCloud/weather/service/WeatherDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hgxsp/springCloud/weather/service/impl/WeatherDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hgxsp/springCloud/weather/service/impl/WeatherDataServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="542e2783-9c61-4de6-bd33-6460e0579f4b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -136,8 +129,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.2/777a74656e7999ef50a01b57be835bfddeb30e4c/lombok-1.18.2-sources.jar!/lombok/Data.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="34" column="91" lean-forward="true" selection-start-line="34" selection-start-column="91" selection-end-line="34" selection-end-column="91" />
+            <state relative-caret-position="372">
+              <caret line="48" column="97" lean-forward="true" selection-start-line="48" selection-start-column="97" selection-end-line="48" selection-end-column="97" />
             </state>
           </provider>
         </entry>
@@ -652,11 +645,11 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541153090694" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541153374888" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -752,16 +745,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541122895461</updated>
-      <workItem from="1541122897670" duration="14225000" />
+      <workItem from="1541122897670" duration="14295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14225000" />
+    <option name="totallyTimeSpent" value="14295000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -1038,8 +1030,8 @@
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.2/777a74656e7999ef50a01b57be835bfddeb30e4c/lombok-1.18.2-sources.jar!/lombok/Data.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="34" column="91" lean-forward="true" selection-start-line="34" selection-start-column="91" selection-end-line="34" selection-end-column="91" />
+        <state relative-caret-position="372">
+          <caret line="48" column="97" lean-forward="true" selection-start-line="48" selection-start-column="97" selection-end-line="48" selection-end-column="97" />
         </state>
       </provider>
     </entry>
