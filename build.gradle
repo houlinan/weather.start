@@ -54,7 +54,8 @@ dependencies {
 	compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.6'
 
 	//lombok
-	compile group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
+	provided group: 'org.projectlombok', name: 'lombok', version: '1.16.22'
+
 
 	/****************************** swagger2 ********************************************/
 	// hspringfox-swagger2

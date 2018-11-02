@@ -1,18 +1,9 @@
 package cn.hgxsp.springCloud.weather.service.impl;
 
-import cn.hgxsp.springCloud.weather.resultVO.ResResult;
 import cn.hgxsp.springCloud.weather.resultVO.WeatherResponse;
-import cn.hgxsp.springCloud.weather.resultVO.Yesterday;
 import cn.hgxsp.springCloud.weather.service.WeatherDataService;
 import cn.hgxsp.springCloud.weather.utils.RedisOperator;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.JsonObject;
-import lombok.extern.apachecommons.CommonsLog;
-import lombok.extern.java.Log;
-import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -45,13 +36,13 @@ public class WeatherDataServiceImpl implements WeatherDataService {
     private static final String GETBYNAMETYPE = "city=" ;
 
     @Override
-    public ResResult getDataByCityId(String id) {
+    public WeatherResponse getDataByCityId(String id) {
         return doGetWeather(id , GETBYIDTYPE) ;
     }
 
 
     @Override
-    public ResResult getDataByCityName(String cityName) {
+    public WeatherResponse getDataByCityName(String cityName) {
         return doGetWeather(cityName , GETBYNAMETYPE) ;
     }
 
@@ -63,14 +54,14 @@ public class WeatherDataServiceImpl implements WeatherDataService {
     *@param:  [value, keyType]
     *@return:  cn.hgxsp.springCloud.weather.resultVO.WeatherResponse
     */
-    private ResResult doGetWeather(String value , String keyType){
+    private WeatherResponse doGetWeather(String value , String keyType){
 
         String getDataUrl = getWeatherUrl + keyType +  value ;
 
         String rediskey = keyType + ":" + value ;
 
         // 先从缓存中获取数据  如果存在则return
-        ResResult resp = null;
+        WeatherResponse resp = null;
         String strBody = null;
         ObjectMapper objectMapper = new ObjectMapper();
         if(! redisOperator.hasKey(rediskey)) {
@@ -78,7 +69,7 @@ public class WeatherDataServiceImpl implements WeatherDataService {
             //发起请求
             ResponseEntity<String> result = restTemplate.getForEntity(getDataUrl, String.class);
 
-            System.out.println("缓存中没有数据， 这里发起请求，获取数据");
+            System.out.println("缓存中没有数据， 这里发起请求，获取数据" + result);
 
             if (result.getStatusCode() == HttpStatus.OK) strBody = result.getBody();
 
@@ -89,7 +80,7 @@ public class WeatherDataServiceImpl implements WeatherDataService {
         System.out.println("strBody = " + strBody );
 
         try {
-            resp = objectMapper.readValue(strBody, ResResult.class);
+            resp = objectMapper.readValue(strBody, WeatherResponse.class);
         } catch (IOException e) {
             e.printStackTrace();
             return null ;
